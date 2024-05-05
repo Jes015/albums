@@ -1,0 +1,28 @@
+{
+  "name": "albums",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/react": "^3.3.2",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/geist-sans": "^5.0.3",
+    "@formkit/auto-animate": "^0.8.2",
+    "@tabler/icons-react": "^3.3.0",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.7.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5",
+    "zustand": "^4.5.2"
+  }
+}

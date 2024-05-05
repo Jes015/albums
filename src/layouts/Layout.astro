@@ -1,0 +1,50 @@
+---
+import { InfoWindowsManager } from "@/components/feat/InfoWindowsManager"
+import { pageData } from "@/data"
+import { frontRoutes } from "@/models/routes.model"
+import "@/styles/global.styles.css"
+import "@fontsource/geist-sans/300.css"
+import "@fontsource/geist-sans/400.css"
+import "@fontsource/geist-sans/500.css"
+import "@fontsource/geist-sans/600.css"
+import "@fontsource/geist-sans/700.css"
+import "@fontsource/geist-sans/800.css"
+import { ViewTransitions } from "astro:transitions"
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="bg-zinc-900 text-zinc-100 text-sm overflow-x-clip">
+		<header class="flex gap-4 items-center p-4">
+			<a
+				href={frontRoutes.statics.home.path}
+				class="text-zinc-100 no-underline hover:text-zinc-100 text-base font-bold uppercase [text-shadow:1px_1px_1px_rgb(200,200,200)]"
+			>
+				{pageData.pageTitle}
+			</a>
+
+			<a class="text-xs font-semibold hover:underline pt-[0.1rem]" href=""
+				>Blog</a
+			>
+		</header>
+		<main class="px-4">
+			<InfoWindowsManager client:load transition:persist />
+			<slot />
+		</main>
+	</body>
+</html>
