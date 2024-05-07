@@ -5,6 +5,7 @@ import { Notification } from "./Notification/Notification"
 
 export const InfoWindowsManager: BaseComponentType = () => {
     const notifications = useNotificationStore((state) => state.notifications)
+    
     const [parent] = useAutoAnimate()
 
     return (

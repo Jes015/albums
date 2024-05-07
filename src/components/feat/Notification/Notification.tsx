@@ -21,7 +21,7 @@ export const Notification: FC<NotificationProps> = ({ data, ...props }) => {
             {...props}
         >
             <header
-                className="flex mt-1 justify-between items-center p-2 border-b-2 border-b-zinc-700/40"
+                className="flex mt-1 justify-between items-center p-2 !pt-1 border-b-2 border-b-zinc-700/40"
             >
                 <div className="flex items-center gap-1">
                     {

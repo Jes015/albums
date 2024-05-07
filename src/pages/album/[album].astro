@@ -1,4 +1,7 @@
 ---
+import Badge from "@/components/ui/Badge.astro"
+import { Image } from "@/components/ui/Image/Image"
+import { Paragraph } from "@/components/ui/Paragraph/Paragraph"
 import Layout from "@/layouts/Layout.astro"
 import type { GetStaticPaths } from "astro"
 export const getStaticPaths = (() => {
@@ -15,10 +18,79 @@ const { album } = Astro.params;
 ---
 
 <Layout title={`${album}'s album`}>
-    {album}
+    <div class="flex flex-col justify-start items-center max-w-[987px] m-auto">
+        <div class="inline-flex flex-col lg:flex-row gap-2">
+            <Image
+                className="!rounded-xl flex-shrink-0 self-center lg:self-start"
+                client:load
+                src="https://pbs.twimg.com/profile_images/1673493812801417220/E3-_ybJu_400x400.jpg"
+                alt="Calls album image"
+                height="320px"
+                width="320px"
+            />
+            <div class="flex flex-col overflow-hidden">
+                <div class="w-fit flex flex-col">
+                    <h2
+                        class="text-4xl text-center lg:text-start text-balance uppercase [text-shadow:1.4px_1.4px_1px_rgb(148,148,148)] font-bold"
+                    >
+                        {album} - A DEDICATION TO ### ####i#
+                    </h2>
+                    <div class="flex justify-between items-center">
+                        <div class="text-[0.68rem] flex gap-1 mt-1">
+                            <Badge type="album">Álbum</Badge>
+                            <Badge type="song">Canción</Badge>
+                            <Badge>Regueton</Badge>
+                            <Badge>Pop</Badge>
+                            <Badge>Balada</Badge>
+                            <Badge>Rap</Badge>
+                        </div>
+                        <div
+                            class="flex items-center gap-1 text-xs italic text-zinc-400 font-medium"
+                        >
+                            <span class=""> Relased on </span>
+                            <time class="text-zinc-300">Mayo 18 de 2024</time>
+                        </div>
+                    </div>
+                </div>
+                <Paragraph client:load>
+                    Este es mi primer album. Estoy grabando las voces con el
+                    telefono de mi abuela y yo mismo lo estoy produciendo y
+                    haciendo los beats. He aprendido mucho, he estado analizando
+                    los beats de Tainy y mas productores durante meses, si
+                    quieres ver todos mis apuntes puedes ir a mi blog (El link
+                    esta al lado de el titulo de la pagina, arriba a la
+                    izquierda), allí esta el link hacia la pagina de apuntes.<br
+                    />
+                    El album se llama <b>CALLS</b> porque como estoy grabando las
+                    voces con un telefono, pensé que iban a sonar muy mal, entonces
+                    la idea era cantar pero con la tematica de que la cancion se
+                    estaba escuchando desde un telefono. <br /> Queria hacer algo
+                    bonito aunque no fuera algo profesional o no tubiera dinero para
+                    hacer pero al final no suenan taan mal. Me gustó mucho el concepto
+                    asi que lo deje y en cada cancion estoy 'hablando con la muchacha'
+                    a la que le estoy dedicando la cancion, pero al igual que en
+                    la realidad, no hay respuesta de la muchacha, por eso se escucha
+                    un 'BEEP BEEP BEEP' de marcando y ella nunca contesta, cuando
+                    hablo yo la idea es que se vaya todo a buzon y yo este dejandole
+                    el mensaje, y no habra respuesta, , por eso cuando hablo sueno
+                    como si fuera atravez de una radio, porque queria hacer algo
+                    bonito aunque no tubiera para hacer cosas muy grandes.
+                </Paragraph>
+            </div>
+        </div>
+        <div class="self-stretch flex flex-col justify-start">
+            <header class="self-stretch">
+                <span
+                    class="font-bold text-zinc-200 [text-shadow:1px_1px_0.4px_rgb(148,148,148)] text-2xl"
+                    >Songs (14)
+                </span>
+            </header>
+            <div>aaaa</div>
+        </div>
+    </div>
     <div
         class="cursor-pointer flex-shrink-0 no-underline text-inherit hover:text-inherit w-[320px] bg-zinc-950/20 rounded-md border-2 border-zinc-800/50 overflow-hidden hover:bg-zinc-800/20 hover:border-zinc-700/40 transition-all"
     >
-    aa
+        {album}
     </div>
 </Layout>

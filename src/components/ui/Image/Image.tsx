@@ -7,9 +7,10 @@ interface IProps {
     height: string
     width: string
     lazy?: boolean
+    className?: string
 }
 
-export const Image: React.FC<IProps> = ({ height, width, src, alt, lazy = false }) => {
+export const Image: React.FC<IProps> = ({ className, height, width, src, alt, lazy = false }) => {
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(false)
     const imageRef = useRef<HTMLImageElement>()
@@ -47,7 +48,8 @@ export const Image: React.FC<IProps> = ({ height, width, src, alt, lazy = false 
             className={
                 [
                     styles.image__container,
-                    isLoading && !error ? styles['image__container--loading'] : styles['image__container--load']
+                    isLoading && !error ? styles['image__container--loading'] : styles['image__container--load'],
+                    className
                 ].join(' ')
             }
         >
