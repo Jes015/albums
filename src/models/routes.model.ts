@@ -4,6 +4,12 @@ const dynamics = {
         path: function (albumName: string) {
             return `/album/${albumName}`
         }
+    },
+    song: {
+        name: 'Song',
+        path: function (songName: string) {
+            return `/song/${songName}`
+        }
     }
 }
 

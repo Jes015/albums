@@ -1,16 +1,24 @@
 ---
+import type { ArtInfo } from "@/models/arte.model"
 import { frontRoutes } from "@/models/routes.model"
+import { getTimeFormatted } from "@/utils/date.util"
 import { Image } from "../ui/Image/Image"
+
+interface Props {
+    data: ArtInfo;
+}
+
+const { data } = Astro.props;
 ---
 
 <a
-    href={frontRoutes.dynamics.album.path('calls')}
+    href={frontRoutes.dynamics.album.path(data.slug)}
     class="cursor-pointer flex-shrink-0 no-underline text-inherit hover:text-inherit w-[320px] bg-zinc-950/20 rounded-md border-2 border-zinc-800/50 overflow-hidden hover:bg-zinc-800/20 hover:border-zinc-700/40 transition-all"
 >
     <header class="relative w-[320px] h-[320px]">
         <Image
             client:load
-            src="https://pbs.twimg.com/profile_images/1673493812801417220/E3-_ybJu_400x400.jpg"
+            src={data.image}
             alt="Calls album image"
             height="320px"
             width="320px"
@@ -18,13 +26,16 @@ import { Image } from "../ui/Image/Image"
     </header>
     <footer class="relative flex flex-col px-4 py-2 text-center">
         <div class="absolute top-[-4px] right-0 px-1">
-            <time class="self-end font-semibold text-[0.44rem] leading-3 text-zinc-300" datetime="">
-                Mayo 18 de 2024
+            <time
+                class="self-end font-semibold text-[0.44rem] leading-3 text-zinc-300"
+            >
+                {getTimeFormatted(data.releaseDate)}
             </time>
         </div>
         <span
-            class="text-balance font-bold [text-shadow:1px_1px_2px_rgb(200,200,200)] text-base"
-            >CALLS - A DEDICATION TO <br /> ### ####i# EDITION
+            class="text-balance font-bold [text-shadow:1px_1px_2px_rgb(200,200,200)] text-xl"
+        >
+            {data.title}
         </span>
     </footer>
 </a>

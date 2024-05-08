@@ -1,0 +1,28 @@
+{
+    "title": "CALLS - A DEDICATION TO ### ####i#",
+    "slug": "calls",
+    "type": "album",
+    "tags": ["Reggae", "Balada", "Rap"],
+    "image": "/calls.jpg",
+    "releaseDate": 1716028282422,
+    "description": "<h3 class=\"title\">Contexto</h3>Este es mi primer album. Estoy grabando las voces con el telefono de mi abuela y yo mismo lo estoy produciendo y haciendo los beats. Heaprendido mucho, he estado analizando los beats de Tainy y masproductores durante meses, si quieres ver todos mis apuntes puedesir a mi blog (El link esta al lado de el titulo de la pagina, arribaa la izquierda), allí esta el link hacia la pagina de apuntes.<h3 class=\"title\">Razones del album</h3>El album se llama <b>CALLS</b> porque como estoy grabando las voces conun telefono, pensé que iban a sonar muy mal, entonces la idea era cantarpero con la tematica de que la cancion se estaba escuchando desde untelefono. <br /> Queria hacer algo bonito aunque no fuera algo profesionalo no tubiera dinero para hacer pero al final no suenan taan mal. Me gustómucho el concepto asi que lo deje y en cada cancion estoy 'hablando conla muchacha' a la que le estoy dedicando la cancion, pero al igual queen la realidad, no hay respuesta de la muchacha, por eso se escucha un'BEEP BEEP BEEP' de marcando y ella nunca contesta, cuando hablo yo laidea es que se vaya todo a buzon y yo este dejandole el mensaje, y nohabra respuesta, , por eso cuando hablo sueno como si fuera atravez deuna radio, porque queria hacer algo bonito aunque no tubiera para hacer cosas muy grandes.",
+    "artists": ["joyolababy"],
+    "links": [
+        {
+            "name": "Youtube",
+            "url": "https://open.spotify.com",
+            "type": "youtube"
+        },
+        {
+            "name": "Spotify",
+            "url": "https://open.spotify.com",
+            "type": "spotify"
+        },
+        {
+            "name": "Apple",
+            "url": "https://open.spotify.com",
+            "type": "apple"
+        }
+    ],
+    "songs": "calls"
+}

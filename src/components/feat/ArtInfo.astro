@@ -1,0 +1,99 @@
+---
+import { type ArtInfo } from "@/models/arte.model"
+import { getTimeFormatted } from "@/utils/date.util"
+import {
+IconBrandAppleFilled,
+IconBrandSpotifyFilled,
+IconBrandYoutubeFilled,
+} from "@tabler/icons-react"
+import { Badge } from "../ui/Badge"
+import { Image } from "../ui/Image/Image"
+import { Paragraph } from "../ui/Paragraph/Paragraph"
+
+interface Props {
+    artData: ArtInfo;
+}
+
+const { artData } = Astro.props;
+
+const icons = {
+    youtube: IconBrandYoutubeFilled,
+    spotify: IconBrandSpotifyFilled,
+    apple: IconBrandAppleFilled,
+};
+---
+
+<div class="inline-flex flex-col lg:flex-row gap-2">
+    <div class="flex flex-col gap-2 flex-shrink w-fit lg:w-full m-auto lg:m-0">
+        <Image
+            className="!rounded-xl flex-shrink-0 self-center lg:self-start"
+            client:load
+            src={artData.image}
+            alt="Calls album image"
+            height="320px"
+            width="320px"
+        />
+        <div class="self-end flex gap-1">
+            {
+                artData.links.map((link) => {
+                    const Icon = icons[link.type];
+
+                    return (
+                        <a
+                            href={link.url}
+                            target="_blank"
+                            class="font-semibold"
+                        >
+                            <Icon
+                                className="hover:scale-110 transition-all"
+                                style={{
+                                    color:
+                                        link.type === "youtube"
+                                            ? "rgb(239 68 68)"
+                                            : link.type === "spotify"
+                                              ? "rgb(34 197 94)"
+                                              : link.type === "apple"
+                                                ? "rgb(161 161 170)"
+                                                : "",
+                                }}
+                            />
+                        </a>
+                    );
+                })
+            }
+        </div>
+    </div>
+    <div class="flex flex-col overflow-hidden min-w-[320px]">
+        <div class="lg:w-fit flex flex-col">
+            <h2
+                class="text-4xl text-center lg:text-start text-balance uppercase [text-shadow:1.4px_1.4px_1px_rgb(148,148,148)] font-bold"
+            >
+                {artData.title}
+            </h2>
+            <div class="flex justify-between items-center">
+                <div class="text-[0.68rem] flex gap-1 mt-1">
+                    {
+                        artData.type === "album" && (
+                            <Badge type="album">Álbum</Badge>
+                        )
+                    }
+                    {
+                        artData.type === "canción" && (
+                            <Badge type="song">Canción</Badge>
+                        )
+                    }
+                    {artData.tags.map((tag) => <Badge>{tag}</Badge>)}
+                </div>
+                <div
+                    class="flex items-center gap-1 text-xs italic text-zinc-400 font-medium"
+                >
+                    <span class=""> Relased on </span>
+                    <time datetime="" class="text-zinc-300">
+                        {getTimeFormatted(artData.releaseDate)}
+                    </time>
+                </div>
+            </div>
+        </div>
+        <Paragraph maxHeight="18rem" client:load content={artData.description} />
+    </div>
+</div>

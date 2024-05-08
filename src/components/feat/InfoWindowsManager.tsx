@@ -10,7 +10,7 @@ export const InfoWindowsManager: BaseComponentType = () => {
 
     return (
         <div
-            className="fixed z-50 top-0 right-0 m-4"
+            className="fixed z-50 top-0 right-0 m-4 max-w-80 overflow-hidden"
         >
             <div
                 className="flex flex-col gap-2 z-50"

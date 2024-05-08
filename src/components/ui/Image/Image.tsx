@@ -47,6 +47,7 @@ export const Image: React.FC<IProps> = ({ className, height, width, src, alt, la
             }}
             className={
                 [
+                    'select-none',
                     styles.image__container,
                     isLoading && !error ? styles['image__container--loading'] : styles['image__container--load'],
                     className

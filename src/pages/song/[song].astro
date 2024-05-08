@@ -1,0 +1,96 @@
+---
+import ArtInfo from "@/components/feat/ArtInfo.astro"
+import { SongPreview } from "@/components/feat/SongPreview"
+import Layout from "@/layouts/Layout.astro"
+import type { ArtInfoArray, ArtInfo as ArtInfoType } from "@/models/arte.model"
+import type { GetStaticPaths } from "astro"
+import { getCollection } from "astro:content"
+
+export const getStaticPaths = (async () => {
+    const songsQuery = await getCollection("songs");
+
+    const songSlugs: string[] = [];
+
+    songsQuery.forEach((songQuery) => {
+        songQuery.data.forEach((song) => {
+            songSlugs.push(song.slug);
+        });
+    });
+
+    const songParams = songSlugs.map((songName) => ({
+        params: {
+            song: songName,
+        },
+    }));
+
+    return songParams;
+}) satisfies GetStaticPaths;
+
+const { song: songSlug } = Astro.params;
+
+const songsQuery = await getCollection("songs");
+
+let songData: ArtInfoType = {
+    title: "",
+    artists: [],
+    description: "",
+    image: "",
+    links: [],
+    releaseDate: 200,
+    slug: "",
+    tags: [],
+    type: "canción",
+};
+
+songsQuery.forEach((songQuery) => {
+    const songFound = songQuery.data.find(
+        (songData) => songData.slug === songSlug,
+    );
+
+    if (songFound != null && songData.title === "") {
+        songData = songFound;
+    }
+});
+
+if (songData == null) return;
+
+let relatedSongs: ArtInfoArray = [];
+
+songsQuery.forEach((songQuery) => {
+    if (relatedSongs.length < 10 && songData.title !== "") {
+        let relatedSongsFound: ArtInfoArray = [];
+
+        songQuery.data.forEach((song) => {
+            if (song.tags.some((tag) => songData.tags.includes(tag)) && songData.title !== song.title) {
+                relatedSongs.push(song)
+            }
+        });
+
+        relatedSongs.concat(relatedSongsFound);
+    }
+});
+---
+
+<Layout title={`${songData.title}'s album`}>
+    <div class="flex flex-col justify-start items-center max-w-[987px] m-auto">
+        <ArtInfo artData={songData} />
+        <div class="self-stretch flex flex-col justify-start">
+            <header class="self-stretch">
+                <span class="font-bold text-zinc-200 text-2xl">
+                    Canciones similares ({relatedSongs.length})
+                </span>
+            </header>
+            <div class="flex flex-col">
+                {
+                    relatedSongs.map((song, index) => (
+                        <SongPreview
+                            index={index}
+                            songInfo={song}
+                            client:load
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</Layout>

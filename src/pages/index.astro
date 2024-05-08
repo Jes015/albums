@@ -1,19 +1,20 @@
 ---
 import AlbumPreview from "@/components/feat/AlbumPreview.astro"
 import Layout from "@/layouts/Layout.astro"
+import { getCollection } from "astro:content"
+
+const albumsQuery = await getCollection("album");
+
+const albumsArray = albumsQuery.map((albumQuery) => albumQuery.data)
+
 ---
 
 <Layout title="joyolababy's albums">
 	<div class="flex flex-wrap gap-1 justify-center">
-		<AlbumPreview />
-		<AlbumPreview />
-		<AlbumPreview />
-		<AlbumPreview />
-		<AlbumPreview />
-		<AlbumPreview />
-		<AlbumPreview />
-		<AlbumPreview />
-		<AlbumPreview />
-		<AlbumPreview />
+		{
+			albumsArray.map((album) => (
+				<AlbumPreview data={album} />
+			))
+		}
 	</div>
 </Layout>

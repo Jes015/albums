@@ -17,7 +17,7 @@ export const Notification: FC<NotificationProps> = ({ data, ...props }) => {
 
     return (
         <div
-            className="peer-checked:[transition-duration:0.2s] [transition-duration:0.4s] transition-transform flex flex-col gap-1 z-50 self-end max-w-80 bg-zinc-900/95 backdrop-blur-sm rounded-md text-zinc-100 border-2 border-zinc-800"
+            className="peer-checked:[transition-duration:0.2s] z-[40000] [transition-duration:0.4s] transition-transform flex flex-col gap-1 self-end max-w-80 bg-zinc-900/95 backdrop-blur-sm rounded-md text-zinc-100 border-2 border-zinc-800"
             {...props}
         >
             <header
