@@ -2,9 +2,13 @@
 import ArtInfo from "@/components/feat/ArtInfo.astro"
 import { SongPreview } from "@/components/feat/SongPreview"
 import Layout from "@/layouts/Layout.astro"
-import type { ArtInfoArray, ArtInfo as ArtInfoType } from "@/models/arte.model"
+import type {
+ArtInfoArray,
+ArtInfo as ArtInfoType,
+CollectionReference,
+} from "@/models/arte.model"
 import type { GetStaticPaths } from "astro"
-import { getCollection } from "astro:content"
+import { getCollection, getEntry } from "astro:content"
 
 export const getStaticPaths = (async () => {
     const songsQuery = await getCollection("songs");
@@ -40,19 +44,44 @@ let songData: ArtInfoType = {
     slug: "",
     tags: [],
     type: "canción",
+    state: "soon",
+    descriptionShowMoreButton: true
+};
+
+let albumCollectionReference: CollectionReference = {
+    collection: "",
+    id: "",
+};
+
+let albumData: ArtInfoType = {
+    title: "",
+    artists: [],
+    description: "",
+    image: "",
+    links: [],
+    releaseDate: 200,
+    slug: "",
+    tags: [],
+    type: "canción",
+    state: "soon",
+    descriptionShowMoreButton: true
 };
 
 songsQuery.forEach((songQuery) => {
+    if (songData.title !== "") return;
+
     const songFound = songQuery.data.find(
         (songData) => songData.slug === songSlug,
     );
 
-    if (songFound != null && songData.title === "") {
+    if (songFound != null) {
         songData = songFound;
+
+        albumCollectionReference = songFound.album;
     }
 });
 
-if (songData == null) return;
+if (songData.title === "") return;
 
 let relatedSongs: ArtInfoArray = [];
 
@@ -61,20 +90,29 @@ songsQuery.forEach((songQuery) => {
         let relatedSongsFound: ArtInfoArray = [];
 
         songQuery.data.forEach((song) => {
-            if (song.tags.some((tag) => songData.tags.includes(tag)) && songData.title !== song.title) {
-                relatedSongs.push(song)
+            if (
+                song.tags.some((tag) => songData.tags.includes(tag)) &&
+                songData.title !== song.title
+            ) {
+                relatedSongs.push(song);
             }
         });
 
         relatedSongs.concat(relatedSongsFound);
     }
 });
+
+const albumQuery = await getEntry("album", albumCollectionReference.id);
+
+if (albumQuery != null) {
+    albumData = albumQuery.data;
+}
 ---
 
 <Layout title={`${songData.title}'s album`}>
-    <div class="flex flex-col justify-start items-center max-w-[987px] m-auto">
-        <ArtInfo artData={songData} />
-        <div class="self-stretch flex flex-col justify-start">
+    <div class="flex flex-col justify-start items-center max-w-[987px] m-auto pb-24">
+        <ArtInfo artData={songData} albumInfo={albumData} />
+        <div class="self-stretch flex flex-col justify-start mt-1">
             <header class="self-stretch">
                 <span class="font-bold text-zinc-200 text-2xl">
                     Canciones similares ({relatedSongs.length})

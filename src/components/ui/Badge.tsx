@@ -5,11 +5,12 @@ interface BadgeProps extends BaseComponentProps {
     type?: 'default' | 'song' | 'album'
 }
 
-export const Badge: FC<BadgeProps> = ({ type = 'default', ...props }) => {
+export const Badge: FC<BadgeProps> = ({ className, type = 'default', ...props }) => {
     return (
         <div
             className={
                 [
+                    className,
                     'border select-none py-[0.1rem] px-[0.28rem] rounded-md',
                     type === 'default' ? "text-inherit font-medium bg-neutral-900 text-zinc-200 border-neutral-700/70" : '',
                     type === 'album' ? 'bg-red-900/10 text-orange-200 font-semibold border-orange-200/20' : '',

@@ -16,6 +16,13 @@ export interface ArtInfo {
     description: string
     links: ArtInfoLinkArray
     artists: string[]
+    state: 'soon' | 'released'
+    descriptionShowMoreButton: boolean
+}
+
+export interface CollectionReference {
+    collection: string
+    id: string
 }
 
 export type ArtInfoArray = ArtInfo[]

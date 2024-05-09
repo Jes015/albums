@@ -8,11 +8,13 @@ const albumSchema = z.object({
     image: z.string(),
     releaseDate: z.number(),
     description: z.string(),
+    descriptionShowMoreButton: z.boolean(),
     links: z.array(z.object({
         name: z.string(),
         url: z.string().url(),
         type: z.enum(['youtube', 'spotify', 'apple'])
     })),
+    state: z.enum(['soon', 'released']),
     artists: z.array(z.string()),
     songs: reference('songs')
 })
@@ -25,6 +27,8 @@ const songSchema = z.object({
     image: z.string(),
     releaseDate: z.number(),
     description: z.string(),
+    descriptionShowMoreButton: z.boolean(),
+    state: z.enum(['soon', 'released']),
     links: z.array(z.object({
         name: z.string(),
         url: z.string().url(),

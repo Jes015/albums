@@ -1,5 +1,7 @@
 .image {
     transition: opacity .5s ease, filter .5s ease;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .image--loading {

@@ -22,8 +22,8 @@ export const Paragraph: FC<ParagraphProps> = ({ maxHeight, content, children, ..
             }}
             {...props}
         >
-            <p
-                className="text-zinc-200 mt-1 font-semibold text-center lg:text-start text-pretty"
+            <div
+                className="text-zinc-200 mt-1 font-medium text-start text-pretty"
                 dangerouslySetInnerHTML={{ __html: content }}
             />
             {

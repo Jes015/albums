@@ -4,15 +4,416 @@
         "slug": "te-amo-___-____i_",
         "type": "canción",
         "tags": [
-            "Balada",
             "Rap"
         ],
         "artists": [
             "joyolababy"
         ],
         "image": "/calls.jpg",
+        "state": "released",
         "releaseDate": 1716028282422,
-        "description": "Este es mi primer album. Estoy grabando las voces con el telefono demi abuela y yo mismo lo estoy produciendo y haciendo los beats. Heaprendido mucho, he estado analizando los beats de Tainy y masproductores durante meses, si quieres ver todos mis apuntes puedesir a mi blog (El link esta al lado de el titulo de la pagina, arribaa la izquierda), allí esta el link hacia la pagina de apuntes.<br />El album se llama <b>CALLS</b> porque como estoy grabando las voces conun telefono, pensé que iban a sonar muy mal, entonces la idea era cantarpero con la tematica de que la cancion se estaba escuchando desde untelefono. <br /> Queria hacer algo bonito aunque no fuera algo profesionalo no tubiera dinero para hacer pero al final no suenan taan mal. Me gustómucho el concepto asi que lo deje y en cada cancion estoy 'hablando conla muchacha' a la que le estoy dedicando la cancion, pero al igual queen la realidad, no hay respuesta de la muchacha, por eso se escucha un'BEEP BEEP BEEP' de marcando y ella nunca contesta, cuando hablo yo laidea es que se vaya todo a buzon y yo este dejandole el mensaje, y nohabra respuesta, , por eso cuando hablo sueno como si fuera atravez deuna radio, porque queria hacer algo bonito aunque no tubiera para hacer cosas muy grandes.",
+        "description": "<h3 class=\"title\">PENSANDO</h3><p>Esta canción es el intro del álbum. Como toda intro de álbum, es la canción con más emoción y donde más se expresa de qué se va a tratar el álbum. Aquí hablo con el corazón y toda la letra de esta canción es sincera. No hay partes donde lo haya hecho para que suene bien; no son letras vacías, son letras con sentimiento.</p><h3 class=\"title\">MI VOZ</h3><p>Estoy experimentando con mi voz, probando diferentes estilos y tonalidades. La forma en la que canto en esta canción la tomé de Jhayco; me gusta mucho su estilo de canto :).</p><h3 class=\"title\">EL BEAT</h3><p>Es un beat muy simple, solo es un sonido para hacer ambiente y acordes. Siempre que quiero expresar sentimientos y emociones, uso un beat muy tranquilo como este.</p>",
+        "descriptionShowMoreButton": false,
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "Tamo chill :)",
+        "slug": "tamo-chill",
+        "type": "canción",
+        "tags": [
+            "Reggae"
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "description": "Explicar la letra y como hice el beat",
+        "descriptionShowMoreButton": false,
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "i know you speak enslugh :)",
+        "slug": "i-know-you-speak-enslugh-happy-face",
+        "type": "canción",
+        "tags": [
+            "Pop"
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "description": "Explicar la letra y como hice el beat",
+        "descriptionShowMoreButton": false,
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "Lo que amar significa",
+        "slug": "___",
+        "type": "canción",
+        "tags": [
+            "Tropical"
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "#####",
+        "slug": "____",
+        "type": "canción",
+        "tags": [
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "#####",
+        "slug": "_____",
+        "type": "canción",
+        "tags": [
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "#####",
+        "slug": "______",
+        "type": "canción",
+        "tags": [
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "#####",
+        "slug": "_______",
+        "type": "canción",
+        "tags": [
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "#####",
+        "slug": "________",
+        "type": "canción",
+        "tags": [
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "#####",
+        "slug": "________",
+        "type": "canción",
+        "tags": [
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "#####",
+        "slug": "__________",
+        "type": "canción",
+        "tags": [
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "#####",
+        "slug": "____________",
+        "type": "canción",
+        "tags": [
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
+        "links": [
+            {
+                "name": "Youtube",
+                "url": "https://open.spotify.com",
+                "type": "youtube"
+            },
+            {
+                "name": "Spotify",
+                "url": "https://open.spotify.com",
+                "type": "spotify"
+            },
+            {
+                "name": "Apple",
+                "url": "https://open.spotify.com",
+                "type": "apple"
+            }
+        ],
+        "album": "calls"
+    },
+    {
+        "title": "Frente al mar",
+        "slug": "frente-al-mar-calls",
+        "type": "canción",
+        "tags": [
+            "Tropical"
+        ],
+        "artists": [
+            "joyolababy"
+        ],
+        "image": "/calls.jpg",
+        "state": "soon",
+        "releaseDate": 1716028282422,
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
         "links": [
             {
                 "name": "Youtube",
@@ -34,18 +435,20 @@
     },
     {
         "title": "Bye <3",
-        "slug": "bye-heart",
+        "slug": "bye-heart-calls",
         "type": "canción",
         "tags": [
-            "Balada",
+            "Balada Romántica",
             "Rap"
         ],
         "artists": [
             "joyolababy"
         ],
         "image": "/calls.jpg",
+        "state": "soon",
         "releaseDate": 1716028282422,
-        "description": "a",
+        "descriptionShowMoreButton": false,
+        "description": "Explicar la letra y como hice el beat",
         "links": [
             {
                 "name": "Youtube",
