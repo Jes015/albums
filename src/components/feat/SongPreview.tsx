@@ -15,7 +15,7 @@ export const SongPreview: FC<SongPreviewProps> = ({ songInfo, index }) => {
             href={songInfo.state === 'soon' ? undefined : frontRoutes.dynamics.song.path(songInfo.slug)}
             className="select-none flex items-center gap-4 no-underline text-inherit font-medium text-zinc-200 hover:!text-zinc-200 p-2 hover:bg-zinc-200/5 rounded-md"
         >
-            <div className="sm:pl-4 w-[38px] flex justify-end flex-shrink-0">
+            <div className="sm:pl-4 pw-[38px] flex justify-end flex-shrink-0">
                 <span className="text-2xl text-zinc-300 font-bold">{index + 1}</span>
             </div>
             <div className="flex-grow flex-col sm:flex-row flex sm:items-center gap-2">

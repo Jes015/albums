@@ -1,6 +1,6 @@
 import type { BaseComponentProps } from "@/models/components.model"
 import { IconArrowDown, IconArrowUp } from "@tabler/icons-react"
-import { useState, type FC } from "react"
+import { useRef, useState, type FC, type LegacyRef } from "react"
 
 interface ParagraphProps extends BaseComponentProps {
     maxHeight?: string
@@ -8,10 +8,20 @@ interface ParagraphProps extends BaseComponentProps {
 }
 
 export const Paragraph: FC<ParagraphProps> = ({ maxHeight, content, children, ...props }) => {
+    const paragraphRef = useRef<HTMLDivElement>()
+
     const [displayLargeText, setDisplayLargeText] = useState(false)
 
     const handleOnClickToShowMore = () => {
-        setDisplayLargeText((state) => !state)
+        setDisplayLargeText((state) => {
+
+            if (state) {
+                const containerElement = document.getElementById('art-container')
+                containerElement?.scrollIntoView({ behavior: 'smooth' })
+            }
+
+            return !state
+        })
     }
 
     return (
@@ -23,6 +33,7 @@ export const Paragraph: FC<ParagraphProps> = ({ maxHeight, content, children, ..
             {...props}
         >
             <div
+                ref={paragraphRef as LegacyRef<HTMLDivElement>}
                 className="text-zinc-200 mt-1 font-medium text-start text-pretty"
                 dangerouslySetInnerHTML={{ __html: content }}
             />
