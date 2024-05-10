@@ -12,23 +12,13 @@
         "image": "/calls.jpg",
         "state": "released",
         "releaseDate": 1716028282422,
-        "description": "<h3 class=\"title\">PENSANDO</h3><p>Esta canción es el intro del álbum. Como toda intro de álbum, es la canción con más emoción y donde más se expresa de qué se va a tratar el álbum. Aquí hablo con el corazón y toda la letra de esta canción es sincera. No hay partes donde lo haya hecho para que suene bien; no son letras vacías, son letras con sentimiento.</p><h3 class=\"title\">MI VOZ</h3><p>Estoy experimentando con mi voz, probando diferentes estilos y tonalidades. La forma en la que canto en esta canción la tomé de Jhayco; me gusta mucho su estilo de canto :).</p><h3 class=\"title\">EL BEAT</h3><p>Es un beat muy simple, solo es un sonido para hacer ambiente y acordes. Siempre que quiero expresar sentimientos y emociones, uso un beat muy tranquilo como este.</p>",
-        "descriptionShowMoreButton": false,
+        "description": "<h3 class=\"title\">RAZONES</h3><p>Esta canción, como las demás canciones se la hice a la chica que le dedico el álbum. Se que no le importo, ni me piensa como yo la pienso, pero prefiero cantar con emociones a que cantar con letras vacías. <br/> Aveces solo quiero olvidarla pero por mas que trate siempre vuelvo a soñarla, lo peor es que ni siquiera se si escuche esta canción. <br/> Pero al menos, gracias a todo esto empecé a cantar y saqué mi primera canción, es algo positivo. <b>si algún día llegas a leer esto, gracias, me hiciste empezar mi carrera como artista <4.</b></p><h3 class=\"title\">PENSANDO</h3><p>Esta canción es el intro del álbum. Como toda intro de álbum, es la canción con más emoción y donde más se expresa de qué se va a tratar el álbum. Aquí hablo con el corazón y toda la letra de esta canción es sincera. No hay partes donde lo haya hecho para que suene bien; no son letras vacías, son letras con sentimiento.</p><h3 class=\"title\">MI VOZ</h3><p>Estoy experimentando con mi voz, probando diferentes estilos y tonalidades. La forma en la que canto en esta canción la tomé de Jhayco; me gusta mucho su estilo de canto :).</p><h3 class=\"title\">EL BEAT</h3><p>Es un beat muy simple, solo es un sonido para hacer ambiente y acordes. Siempre que quiero expresar sentimientos y emociones, uso un beat muy tranquilo como este.</p>",
+        "descriptionShowMoreButton": true,
         "links": [
             {
                 "name": "Youtube",
-                "url": "https://open.spotify.com",
+                "url": "https://www.youtube.com/watch?v=MziOsmfnV78",
                 "type": "youtube"
-            },
-            {
-                "name": "Spotify",
-                "url": "https://open.spotify.com",
-                "type": "spotify"
-            },
-            {
-                "name": "Apple",
-                "url": "https://open.spotify.com",
-                "type": "apple"
             }
         ],
         "album": "calls"
