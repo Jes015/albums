@@ -35,7 +35,7 @@ export const SongPreview: FC<SongPreviewProps> = ({ songInfo, index }) => {
                         />
                         <div>
                             <div className="flex flex-col sm:flex-row items-start sm:items-center sm:gap-1">
-                                <span className="text-xl font-semibold"> {songInfo.title} </span>
+                                <span className="text-xl font-semibold line-clamp-1"> {songInfo.title} </span>
                                 <div className="flex text-xs gap-1 items-center sm:ml-2">
                                     {
                                         songInfo.tags.map((tag) => (
