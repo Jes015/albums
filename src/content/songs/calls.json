@@ -48,30 +48,6 @@
         "album": "calls"
     },
     {
-        "title": "i know you speak english",
-        "slug": "i-know-you-speak-english",
-        "type": "canción",
-        "tags": [
-            "Pop"
-        ],
-        "artists": [
-            "joyolababy"
-        ],
-        "image": "/calls.jpg",
-        "state": "released",
-        "releaseDate": 1717477200000,
-        "description": "<h3 class=\"title\">Razón</h3><p>En esta canción quiero mostrar la intriga que tengo acerca de la chica a la que le dedico el album, realmente no se si es una buena o mala mujer. Como la mayoría de personas, muchas veces pienso que es mala, pero siempre que amas a alguien solo quieres pensar en que es una buena persona :/.</p><h3 class=\"title\">Mi voz</h3><p>Intenté hacer una voz mucho mas nasal, me gusta como sueno haciendo una voz nasal. Nunca pensé decir eso pero sueno mucho mas afinado y me gusta. De hecho, en esta canción no usé autotune, se nota al final porque desafino un poquito, pero no quise arreglarlo y grabar otra vez, pienso que es parte de mi historia.</p>",
-        "descriptionShowMoreButton": false,
-        "links": [
-            {
-                "name": "Youtube",
-                "url": "https://youtu.be/9fJua2NmcCo?si=5gn2qIki9PLbSMAU",
-                "type": "youtube"
-            }
-        ],
-        "album": "calls"
-    },
-    {
         "title": "Lo que amar significa",
         "slug": "lo-que-amar-significa",
         "type": "canción",
